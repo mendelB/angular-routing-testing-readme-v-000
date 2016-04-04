@@ -8,12 +8,16 @@ describe('Routes', function () {
 	}));
 
 	describe('Settings', function () {
-		var state;
 
 		it('should have the correct URL', function () {
-			state = $state.get('settings');
-
+			var state = $state.get('settings');
 			expect(state.url).toEqual('/settings');
 		});
+
+		it('should have the correct Template', function(){
+			var state = $state.get('settings');
+			expect(state.templateUrl).toEqual('views/settings.html')
+		});
+
 	});
 });
